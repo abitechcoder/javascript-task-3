@@ -6,14 +6,22 @@ const wordReplace = function(num){
 		let j = '';
 		if(i % 2 == 0){
 			if(i % 3 == 0){
-				j = 'yu-gi';
+				if(i % 5 == 0){
+					j = 'yu-gi-oh';
+				}else{
+					j = 'yu-gi';
+				}
 			}else if(i % 5 == 0){
 				j = 'yu-oh';
 			}else{
 				j = 'yu';
 			}
 		}else if(i % 3 == 0){
-			j = 'gi';
+			if(i % 5 == 0){
+				j = 'gi-oh';
+			}else{
+				j = 'gi';
+			}
 		}else if(i % 5 == 0){
 			j = 'oh';
 		}else{
